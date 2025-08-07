@@ -2,30 +2,24 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <!-- Critical iPad Viewport Settings -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-    <title>Launch Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>AlJouf Health Cluster</title>
     <style>
-        /* Reset & Full-Screen Styles */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             overflow: hidden;
             background-color: #f0f0f0;
-            position: fixed; /* Prevents rubber-banding on iOS */
+            position: fixed;
         }
-        
-        /* Image Scaling (Priority to Full Height) */
         .fullscreen-img {
             width: 100%;
-            height: 100vh;
+            height: 100%;
             object-fit: contain;
             display: block;
         }
-        
-        /* Clickable "Start" Button */
         .click-area {
             position: absolute;
             bottom: 15%;
@@ -36,10 +30,9 @@
             cursor: pointer;
             z-index: 100;
         }
-        
-        /* iPad-Specific Tweaks */
         @supports (-webkit-touch-callout: none) {
             body {
+                height: -webkit-fill-available;
                 -webkit-text-size-adjust: 100%;
             }
             .fullscreen-img {
@@ -49,12 +42,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Preloaded optimized image -->
-        <img src="Client_design_Launch_page.png" alt="Launch Page" class="launch-image" loading="eager">
-        
-        <!-- Clickable area (replace YOUR_LINK_HERE) -->
-        <a href="https://asm-aljouf.seeraarabia.com/app/asset-management" class="click-area" onclick="event.stopPropagation();"></a>
-    </div>
+    <img src="Client_design_Launch_page.png" class="fullscreen-img" alt="Launch Page">
+    <a href="YOUR_LINK_HERE" class="click-area" target="_blank"></a>
 </body>
 </html>
